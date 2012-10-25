@@ -1,0 +1,4 @@
+source .env
+export USE_BUNDLER=force
+
+rvm use --create --install $RVM_GEMSET
