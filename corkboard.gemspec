@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   s.add_dependency "instagram"
 
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "capybara"
+  s.add_development_dependency "ffaker"
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "yard"
   s.add_development_dependency "yard-rails"
