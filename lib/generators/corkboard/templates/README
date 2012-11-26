@@ -1,0 +1,14 @@
+===============================================================================
+
+Thanks for installing Corkboard!
+
+Please perform the following steps to complete Corkboard setup:
+
+  * Run the database migration(s):
+
+        rake corkboard:install:migrations
+        rake db:migrate
+
+  * Configure Corkboard in the `config/initializers/corkboard.rb` initializer.
+
+===============================================================================

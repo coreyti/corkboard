@@ -1,0 +1,32 @@
+<article data-view="corkboard/authorizations/index" class="container">
+  <header>
+    <h1>Setup</h1>
+  </header>
+
+  <section>
+    <h2>Activated Services</h2>
+    <ul>
+      <%- activated.each do |authorization| -%>
+      <li>
+        <%#= debug(authorization) %>
+        <p>
+          <%= authorization.provider %>:
+          <%= authorization.info.nickname %>
+          <%= button_to('unlink', authorization_path(authorization.provider), :method => :delete) %>
+        </p>
+      </p>
+      <%- end -%>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Available Services</h2>
+    <ul>
+      <%- available.each do |provider| -%>
+      <li>
+        <%= provider %> <%= link_to('link', authorization_path(provider)) %>
+      </p>
+      <%- end -%>
+    </ul>
+  </section>
+</article>

@@ -1,0 +1,15 @@
+<%- filters = Corkboard.interests[:filters] %>
+
+<nav class="corkboard filters">
+  <%= content_tag(:ul, attributes_for(:filters_list)) do %>
+    <%= content_tag(:li, attributes_for(:filters_item, :class => :active)) do %>
+      <a href="#all" class="all">all</a>
+    <%- end -%>
+
+    <%- filters.each do |filter| -%>
+    <%= content_tag(:li, attributes_for(:filters_item)) do %>
+      <a href="#<%= filter %>"><%= filter %></a>
+    <%- end -%>
+    <%- end -%>
+  <%- end -%>
+</nav>

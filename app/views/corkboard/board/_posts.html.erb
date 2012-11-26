@@ -1,0 +1,10 @@
+<ul class="corkboard posts">
+  <%- posts.each do |post| -%>
+  <%= content_tag(:li, attributes_for(:posts_item, :resource => post)) do %>
+    <figure>
+      <img src="<%= post[:images][:low_resolution][:url] %>">
+      <p class="caption"><%= (post[:caption] || {})['created_time'] %></p>
+    </figure>
+  <%- end -%>
+  <%- end -%>
+</ul>

@@ -1,0 +1,45 @@
+//= require modernizr
+//= require jquery
+//= require jquery_ujs
+//= require jquery.masonry
+//= require jquery.masonry-extensions
+//= require pusher
+
+//= require corkboard/base
+//= require_tree ./corkboard/lib
+//= require_tree ./corkboard/app
+
+(function($, corkboard) {
+  // Corkboard properties pulled from the server. Client-side definitions
+  // should go in `corkboard/base.js`, to ensure availability and keep this
+  // file clean.
+  //
+  // TODO: consider something like `gon`, rather than making this file `erb`.
+  $.extend(corkboard, {
+    version : '<%= Corkboard::VERSION %>',
+    config  : function config(key) {
+      return corkboard.config[key] || corkboard.defaults[key];
+    }
+  });
+
+  $.extend(corkboard.config, {
+    pusher  : '<%= Pusher.key %>',
+    weights : <%= Corkboard.presentation[:weights].to_json %>
+  });
+
+  // Define jQuery.fn.corkboard
+  $.fn.extend({
+    // corkboard : $.corkboard.Board
+    corkboard : function corkboard() {
+      this.each(function() {
+        new $.corkboard.Board($(this));
+      });
+
+      return this;
+    }
+  });
+
+  $(function() {
+    $('article.corkboard').corkboard();
+  });
+})(jQuery, jQuery.corkboard);

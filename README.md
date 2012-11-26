@@ -20,6 +20,21 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Developing
+
+TODO...
+
+### Jasmine (js) Specs
+
+  * To run from command line:
+
+        $ rake spec:javascript
+
+  * To see them in the browser:
+
+        $ cd spec/dummy && rails s
+        # open browser to http://localhost:3000/jasmine
+
 ## Contributing
 
 1. Fork it

@@ -1,0 +1,93 @@
+/**
+ * Stylesheet: Corkboard Responsive
+ * -------------------:--------------------------------------------------------
+ */
+
+/**
+ * @section: mobile portrait to landscape
+ * -------------------:--------------------------------------------------------
+ */
+@media only screen and (max-width: 320px) {
+  ul.corkboard.posts > li.s,
+  ul.corkboard.posts > li.m,
+  ul.corkboard.posts > li.l {
+    width             : 156px;
+    height            : 156px;
+  }
+}
+
+/**
+ * @section: mobile portrait to landscape
+ * -------------------:--------------------------------------------------------
+ */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  ul.corkboard.posts > li.s,
+  ul.corkboard.posts > li.m,
+  ul.corkboard.posts > li.l {
+    width             : 178px;
+    height            : 178px;
+  }
+}
+
+/**
+ * @section: mobile landscape to tablet portrait
+ * -------------------:--------------------------------------------------------
+ */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  ul.corkboard.posts > li.s {
+    width             : 136px;
+    height            : 136px;
+  }
+
+  ul.corkboard.posts > li.m,
+  ul.corkboard.posts > li.l {
+    width             : 276px;
+    height            : 276px;
+  }
+}
+
+/**
+ * @section: tablet portrait to standard desktop
+ * -------------------:--------------------------------------------------------
+ */
+@media only screen and (min-width: 769px) and (max-width: 980px) {
+  ul.corkboard.posts > li.s {
+    width             : 168px;
+    height            : 168px;
+  }
+
+  ul.corkboard.posts > li.m,
+  ul.corkboard.posts > li.l {
+    width             : 340px;
+    height            : 340px;
+  }
+}
+
+/**
+ * @section: standard desktop and larger
+ * -------------------:--------------------------------------------------------
+ */
+@media only screen and (min-width: 981px) {
+  ul.corkboard.posts > li.s {
+    width             : 168px;
+    height            : 168px;
+  }
+
+  ul.corkboard.posts > li.m {
+    width             : 340px;
+    height            : 340px;
+  }
+
+  ul.corkboard.posts > li.l {
+    width             : 512px;
+    height            : 512px;
+  }
+}
+
+/**
+ * @section: HD
+ * -------------------:--------------------------------------------------------
+ */
+@media only screen and (min-width: 1200px) {
+
+}
