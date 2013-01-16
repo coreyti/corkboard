@@ -13,7 +13,9 @@ Gem::Specification.new do |s|
   s.summary     = "Dashboard composed of social network posts."
   s.description = "Dashboard composed of social network posts."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
+  s.files       = `git ls-files`.split($\)
+  s.executables = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files  = s.files.grep(%r{^(test|spec|features)/})
 
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "jquery-rails"
