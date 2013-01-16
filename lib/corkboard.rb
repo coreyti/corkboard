@@ -1,5 +1,7 @@
+require 'corkboard/version' # NOTE: required for `rake assets:precompile`
 require 'corkboard/engine'
 require 'omniauth'
+require 'pusher'            # NOTE: required for `rake assets:precompile`
 require 'redis'
 
 module Corkboard
