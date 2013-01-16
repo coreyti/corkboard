@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    corkboard (0.1.1)
+    corkboard (0.1.2)
       instagram
       jquery-rails
       omniauth
