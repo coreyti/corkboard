@@ -56,11 +56,12 @@
     // TODO: generalize filter placement (to other-than-FAB)
     filters.on('click', 'a', function(e) {
       var link    = $(this);
+      var href    = link.attr('href');
+      if (!href || href=='#') return false;  // do nothing if href empty
       var filters = $('li', selectors.filters);
       var filter  = link.parent().toggleClass('active');
       var posts   = $(selectors.posts);
       var entries = posts.find(selectors.entry);
-      var href    = link.attr('href');
       var tag     = href.replace('#', '');
 
       filters.not(filter).removeClass('active');
